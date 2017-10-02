@@ -26,17 +26,6 @@ dependencies {
     testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.0")
 }
 
-task copy(type: Copy) {
-    from 'src'
-    into 'dest'
-}
-
-task zip(type: Zip) {
-    from 'src'
-}
-
-task hello {
-    doLast {
-        'hello'
-    }
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.2'
 }
